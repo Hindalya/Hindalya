@@ -1,0 +1,3 @@
+obj = {
+    favicon:"https://iili.io/HO3ry7a.md.png",
+}
