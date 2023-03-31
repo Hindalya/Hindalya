@@ -21,9 +21,10 @@ const Contener = styled.header`
   align-items: center;
   `;
 
-  const Logo = styled.h2`
+  const Logo = styled.img`
       cursor:pointer;
-      margin-left: 1rem;
+      height: 5rem;
+      width:10rem;
   `;
 
   const Center = styled.div`
@@ -57,13 +58,16 @@ const Nav = styled.nav`
   cursor:pointer;
   font-size:18px;
 `;
+const apiUrl = process.env.REACT_APP_API_URL;
 
+console.log(apiUrl);
 const Navbar = () => {
   return (
     <Contener>
       <Left>
         <MenuIcon/>
-        <Logo>Hindalya</Logo>
+        <Logo src = {`${apiUrl || "http://localhost:3000/assets"}/images/logo.jpeg`}
+        alt = "logo"/>
       </Left>
           
       <Center>
