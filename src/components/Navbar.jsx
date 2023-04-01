@@ -58,7 +58,6 @@ const Nav = styled.nav`
   cursor:pointer;
   font-size:18px;
 `;
-const apiUrl = process.env.REACT_APP_API_URL;
 
 console.log(apiUrl);
 const Navbar = () => {
@@ -66,7 +65,7 @@ const Navbar = () => {
     <Contener>
       <Left>
         <MenuIcon/>
-        <Logo src = {`https://iili.io/HO36kl9.th.png`}
+        <Logo src = {`/assets/images/logo.jpeg`}
         alt = "logo"/>
       </Left>
           
