@@ -66,7 +66,7 @@ const Navbar = () => {
     <Contener>
       <Left>
         <MenuIcon/>
-        <Logo src = {`${apiUrl || "http://localhost:3000/assets"}/images/logo.jpeg`}
+        <Logo src = {`../public/assets/images/logo.jpeg`}
         alt = "logo"/>
       </Left>
           
