@@ -1,9 +1,19 @@
-import React from 'react'
 import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const Contener = styled.header`
+    margin-bottom: 1rem;
     height: 5rem;
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.4);
     display: flex;
@@ -59,14 +69,14 @@ const Nav = styled.nav`
   font-size:18px;
 `;
 
-console.log(apiUrl);
 const Navbar = () => {
   return (
     <Contener>
       <Left>
         <MenuIcon/>
-        <Logo src = {`/assets/images/logo.jpeg`}
+        <StyledLink to="/"><Logo src = {`/assets/images/logo.jpeg`}
         alt = "logo"/>
+        </StyledLink>        
       </Left>
           
       <Center>
@@ -77,9 +87,9 @@ const Navbar = () => {
       </Center>
 
       <Right>
-          <Nav>Home</Nav>
-          <Nav>About</Nav>
-          <Nav>Contact</Nav>
+      <Nav><StyledLink to="/">Home</StyledLink></Nav>
+      <Nav><StyledLink to="/about">About</StyledLink></Nav>
+      <Nav><StyledLink to="/contact">Contact</StyledLink></Nav>
       </Right>
     </Contener>        
 

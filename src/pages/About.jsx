@@ -1,10 +1,12 @@
-import React from 'react'
-
+import styled from "styled-components";
+const Wrapper = styled.div`
+  padding-top:5rem;
+`;
 const About = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>About</h1>
-    </div>
+    </Wrapper>
   )
 }
 

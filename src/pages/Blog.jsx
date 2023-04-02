@@ -1,10 +1,13 @@
-import React from 'react'
+import styled from "styled-components";
+const Wrapper = styled.div`
+  padding-top:5rem;
+`;
 
 const Blog = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>Blog</h1>
-    </div>
+    </Wrapper>
   )
 }
 

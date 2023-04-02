@@ -1,13 +1,47 @@
 import styled from 'styled-components';
+import Cards from '../components/Cards';
+import Languages from '../components/Languages';
+import { Link } from "react-router-dom";
 
-const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
+  `;
+  const Right = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  `;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 const Title = styled.h1`
   font-size: 48px;
   font-weight: bold;
@@ -29,16 +63,32 @@ const Button = styled.button`
   font-size: 18px;
   cursor: pointer;
 `;
+
+const Hr = styled.hr`
+  opacity:.2rem;
+`;
+
 const Home = () => {
   return (
-    <HomeWrapper>
-      <Title>Welcome to My Website</Title>
-      <Subtitle>Learn more about what I do and how I can help you</Subtitle>
-      <Button>Get Started</Button>
-    </HomeWrapper>
+    <>
+    <Wrapper>
+    <Left>
+      <Title>Welcome to your professional developer community</Title>
+        <Subtitle>Let's Spread The Knowledge And Kindness Everywhere</Subtitle>
+        <StyledLink><Button>Get Started</Button></StyledLink>
+      </Left>
+      <Right>
+        <Image 
+        src={`/assets/images/LandingPageImage.jpeg`}
+        alt="CoverImage" />
+      </Right>
+    </Wrapper>
+    <Hr/>
+    <Languages/>
+    <Hr/>
+   <Cards/>
+    </>
   )
 }
-
-
 
 export default Home

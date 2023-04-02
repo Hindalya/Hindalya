@@ -1,5 +1,21 @@
 import styled from "styled-components";
-  const Container = styled.header`
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+  color: hsl(210,8%,60%);
+  margin: 0.3rem;
+  cursor: pointer;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Container = styled.header`
+    margin-top: 1rem;
     display: flex;
     padding: 1rem;
     justify-content: space-around;
@@ -53,13 +69,6 @@ const Heading = styled.h5`
   color:hsl(210,8%,75%)
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: hsl(210,8%,60%);
-  margin: 0.3rem;
-  cursor: pointer;
-  font-size: 12px;
-  `;
   const SocialContainer = styled.div`
   display: flex;
   `;
@@ -81,45 +90,45 @@ function Footer() {
           </Heading>
         <LinkContainer>
           
-          <Link>Questions</Link>
-          <Link>Help</Link>
+          <StyledLink>Questions</StyledLink>
+          <StyledLink>Help</StyledLink>
         </LinkContainer>
       </Left>
 
       <Center>
       <Heading>COMPANY</Heading>
         <LinkContainer>
-          <Link>About</Link>
-          <Link>Press</Link>
-          <Link>Work Here</Link>
-          <Link>Legal</Link>
-          <Link>Privacy Policy</Link>
-          <Link>Term of Services</Link>
-          <Link>Contact Us</Link>
-          <Link>Cookies Settings</Link>
-          <Link>Cookie Policy</Link>
+          <StyledLink>About</StyledLink>
+          <StyledLink>Press</StyledLink>
+          <StyledLink>Work Here</StyledLink>
+          <StyledLink>Legal</StyledLink>
+          <StyledLink>Privacy Policy</StyledLink>
+          <StyledLink>Term of Services</StyledLink>
+          <StyledLink>Contact Us</StyledLink>
+          <StyledLink>Cookies Settings</StyledLink>
+          <StyledLink>Cookie Policy</StyledLink>
         </LinkContainer>
       </Center>
       <Center>
       <Heading>HINDALYA NETWORK</Heading>
         <LinkContainer>
-          <Link>Technology</Link>
-          <Link>Culture & recreation</Link>
-          <Link>Life & arts</Link>
-          <Link>Science</Link>
-          <Link>Professional</Link>
-          <Link>Business</Link>
-          <Link>API</Link>
-          <Link>Data</Link>
+          <StyledLink>Technology</StyledLink>
+          <StyledLink>Culture & recreation</StyledLink>
+          <StyledLink>Life & arts</StyledLink>
+          <StyledLink>Science</StyledLink>
+          <StyledLink>Professional</StyledLink>
+          <StyledLink>Business</StyledLink>
+          <StyledLink>API</StyledLink>
+          <StyledLink>Data</StyledLink>
         </LinkContainer>
       </Center>
       <Right>
       <SocialContainer>
-        <Link>Blog</Link>
-        <Link>Facebook</Link>
-        <Link>Twitter</Link>
-        <Link>LinkdIn</Link>
-        <Link>Instagram</Link>
+        <StyledLink to="/">Blog</StyledLink>
+        <StyledLink>Facebook</StyledLink>
+        <StyledLink>Twitter</StyledLink>
+        <StyledLink>LinkedIn</StyledLink>
+        <StyledLink>Instagram</StyledLink>
       </SocialContainer> 
         <Tagline>Site design / logo © 2023 Hindalya Inc; user contributions licensed under CC BY-SA. rev 2023.3.30.43364</Tagline>
       </Right>
