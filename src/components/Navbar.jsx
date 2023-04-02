@@ -76,8 +76,7 @@ const Navbar = () => {
         <MenuIcon/>
         <StyledLink to="/"><Logo src = {`/assets/images/logo.jpeg`}
         alt = "logo"/>
-        </StyledLink>
-        
+        </StyledLink>        
       </Left>
           
       <Center>
