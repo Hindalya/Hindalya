@@ -95,7 +95,7 @@ const Navbar = () => {
 
       <Right>
       <Nav><StyledLink to="/">Home</StyledLink></Nav>
-      <Nav><StyledLink to="/course">Courses</StyledLink></Nav>
+      <Nav><StyledLink to="/course">My courses</StyledLink></Nav>
       <Nav><StyledLink to="/projects">Project</StyledLink></Nav>
       </Right>
       <NavButton>
