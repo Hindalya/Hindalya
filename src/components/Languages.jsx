@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Grid from '@mui/material/Grid';
 import Courses from './Courses';
+import { Drawer } from '@mui/material';
 
 const CoursesWrapper = styled.div`
   display: flex;
@@ -94,6 +95,7 @@ const Languages = () => {
                 <Courses key={item.id} item ={item}/>
         ))}
       </Grid>
+      <Drawer/>
     </LatestProjects>
     </CoursesWrapper>
     
