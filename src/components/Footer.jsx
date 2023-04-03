@@ -98,13 +98,13 @@ function Footer() {
       <Center>
       <Heading>COMPANY</Heading>
         <LinkContainer>
-          <StyledLink>About</StyledLink>
+          <StyledLink to={"/about"}>About</StyledLink>
           <StyledLink>Press</StyledLink>
           <StyledLink>Work Here</StyledLink>
           <StyledLink>Legal</StyledLink>
           <StyledLink>Privacy Policy</StyledLink>
           <StyledLink>Term of Services</StyledLink>
-          <StyledLink>Contact Us</StyledLink>
+          <StyledLink to="/contact">Contact Us</StyledLink>
           <StyledLink>Cookies Settings</StyledLink>
           <StyledLink>Cookie Policy</StyledLink>
         </LinkContainer>
@@ -124,7 +124,7 @@ function Footer() {
       </Center>
       <Right>
       <SocialContainer>
-        <StyledLink to="/">Blog</StyledLink>
+        <StyledLink to="/blog">Blog</StyledLink>
         <StyledLink>Facebook</StyledLink>
         <StyledLink>Twitter</StyledLink>
         <StyledLink>LinkedIn</StyledLink>

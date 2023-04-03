@@ -7,6 +7,7 @@ import Projects from "./pages/Projects.jsx";
 import Blog from "./pages/Blog.jsx";
 import Profile from "./pages/Profile.jsx";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
+import Course from "./pages/Course.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/projects" element={<Projects/>} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/course" element={<Course/>} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
       <Footer/>
