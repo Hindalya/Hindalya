@@ -24,6 +24,8 @@ const  Text = styled.p`
   text-align: justify;
   margin: 0.5rem;
   width: 80%;
+  line-height: 1.2;
+  letter-spacing: .002rem;
   `;
 
 const HighLight = styled.span`

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
-import { Button, Drawer } from '@mui/material';
+import { Button} from '@mui/material';
 import Menu from "./Menu";
+import Drawer from './Drawer';
 
 const StyledLink = styled(Link)`
   color: black;
@@ -60,6 +60,10 @@ const Contener = styled.header`
   const SearchInput = styled.input`
     border: none;
     width:100%;
+
+    &:focus {
+      outline: none;
+    }
   `;
 const Right = styled.div`
   flex: 1;
@@ -77,10 +81,11 @@ const Nav = styled.nav`
 `;
 
 const Navbar = () => {
+  const user = false;
   return (
     <Contener>
       <Left>
-        <MenuIcon/>
+        <Drawer/>
         <StyledLink to="/"><Logo src = {`/assets/images/logo.jpeg`}
         alt = "logo"/>
         </StyledLink>
@@ -95,11 +100,13 @@ const Navbar = () => {
 
       <Right>
       <Nav><StyledLink to="/">Home</StyledLink></Nav>
-      <Nav><StyledLink to="/course">My courses</StyledLink></Nav>
-      <Nav><StyledLink to="/projects">Project</StyledLink></Nav>
+      <Nav><StyledLink to="/my courses">My courses</StyledLink></Nav>
+      <Nav><StyledLink to="/projects">Projects</StyledLink></Nav>
       </Right>
       <NavButton>
-        <Button color="inherit"><StyledLink to="/login">Login </StyledLink> </Button>
+      {
+        user ? <Menu/>:<Button color="inherit"><StyledLink to="/login">Login</StyledLink> </Button>
+      }
       </NavButton> 
     </Contener>        
 

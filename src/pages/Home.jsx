@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Cards from '../components/Cards';
 import Languages from '../components/Languages';
 import { Link } from "react-router-dom";
+import { Divider } from '@mui/material';
 
 const StyledLink = styled(Link)`
   color: black;
@@ -64,10 +65,6 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Hr = styled.hr`
-  opacity:.2rem;
-`;
-
 const Home = () => {
   return (
     <>
@@ -83,9 +80,9 @@ const Home = () => {
         alt="CoverImage" />
       </Right>
     </Wrapper>
-    <Hr/>
+      <Divider />
     <Languages/>
-    <Hr/>
+      <Divider />
    <Cards/>
     </>
   )

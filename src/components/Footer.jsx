@@ -6,7 +6,6 @@ const StyledLink = styled(Link)`
   cursor: pointer;
   color: hsl(210,8%,60%);
   margin: 0.3rem;
-  cursor: pointer;
   font-size: 12px;
 
   &:hover {

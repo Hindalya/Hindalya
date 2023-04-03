@@ -1,22 +1,25 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -39,26 +42,12 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Home', 'My courses', 'Projects', 'About','Login'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+            <StyledLink to={text === 'Home' ? '/' : `/${text.toLowerCase()}`}>
+            <ListItemText primary={text} />
+            </StyledLink>
             </ListItemButton>
           </ListItem>
         ))}
@@ -67,10 +56,10 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
+    <>
+      {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+         <MenuIcon onClick={toggleDrawer(anchor, true)}/>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
@@ -81,6 +70,6 @@ export default function SwipeableTemporaryDrawer() {
           </SwipeableDrawer>
         </React.Fragment>
       ))}
-    </div>
+    </>
   );
 }
