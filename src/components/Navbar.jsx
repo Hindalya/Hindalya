@@ -88,7 +88,7 @@ const Navbar = () => {
 
       <Right>
       <Nav><StyledLink to="/">Home</StyledLink></Nav>
-      <Nav><StyledLink to="/about">About</StyledLink></Nav>
+      <Nav><StyledLink to="/mycourses">My courses</StyledLink></Nav>
       <Nav><StyledLink to="/contact">Contact</StyledLink></Nav>
       </Right>
     </Contener>        
