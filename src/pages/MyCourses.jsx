@@ -2,7 +2,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   padding-top:5rem;
 `;
-const MyCources = () => {
+const MyCourses = () => {
   return (
     <Wrapper>
       <h1>My Cources</h1>
@@ -10,4 +10,4 @@ const MyCources = () => {
   )
 }
 
-export default MyCources
+export default MyCourses
