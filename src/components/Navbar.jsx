@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
+import { Button, Drawer } from '@mui/material';
+import Menu from "./Menu";
 
 const StyledLink = styled(Link)`
   color: black;
@@ -11,6 +13,11 @@ const StyledLink = styled(Link)`
     text-decoration: underline;
   }
 `;
+
+const NavButton = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }`
 
 const Contener = styled.header`
     margin-bottom: 1rem;
@@ -64,7 +71,7 @@ const Right = styled.div`
 `;
 
 const Nav = styled.nav`
-  margin-left: 1rem;
+  margin-Right: 1rem;
   cursor:pointer;
   font-size:18px;
 `;
@@ -77,7 +84,6 @@ const Navbar = () => {
         <StyledLink to="/"><Logo src = {`/assets/images/logo.jpeg`}
         alt = "logo"/>
         </StyledLink>
-        
       </Left>
           
       <Center>
@@ -89,9 +95,12 @@ const Navbar = () => {
 
       <Right>
       <Nav><StyledLink to="/">Home</StyledLink></Nav>
-      <Nav><StyledLink to="/about">About</StyledLink></Nav>
-      <Nav><StyledLink to="/contact">Contact</StyledLink></Nav>
+      <Nav><StyledLink to="/course">Courses</StyledLink></Nav>
+      <Nav><StyledLink to="/projects">Project</StyledLink></Nav>
       </Right>
+      <NavButton>
+        <Button color="inherit"><StyledLink to="/login">Login </StyledLink> </Button>
+      </NavButton> 
     </Contener>        
 
   )
