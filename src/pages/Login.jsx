@@ -81,6 +81,7 @@ import styled from "styled-components";
     margin-bottom: 0.8rem;`
 
     const LoginButton = styled.button`
+    margin-top: 0.4rem;
     margin-bottom: 0.8rem;
     width: 100%;
     display: flex;
