@@ -127,7 +127,7 @@ const Login = () => {
           <Inputtag name="email" placeholder="Email" minLength={7} maxLength={64} required type="email"/>
           </Input>
           <Input>
-          <Inputtag name="password" placeholder="password" minLength={4} maxLength={64} required type="password"/>
+          <Inputtag name="password" placeholder="Password" minLength={4} maxLength={64} required type="password"/>
           </Input>
           <LoginButton><Span>Log in</Span></LoginButton>
         </Container>
