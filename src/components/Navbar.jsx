@@ -100,8 +100,8 @@ const Navbar = () => {
 
       <Right>
       <Nav><StyledLink to="/">Home</StyledLink></Nav>
-      <Nav><StyledLink to="/about">About</StyledLink></Nav>
-      <Nav><StyledLink to="/contact">Contact</StyledLink></Nav>
+      <Nav><StyledLink to="/my courses">My courses</StyledLink></Nav>
+      <Nav><StyledLink to="/projects">Projects</StyledLink></Nav>
       </Right>
       <NavButton>
       {
