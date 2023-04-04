@@ -97,7 +97,7 @@ function Footer() {
       <Center>
       <Heading>COMPANY</Heading>
         <LinkContainer>
-          <StyledLink to={"/about"}>About</StyledLink>
+          <StyledLink>About</StyledLink>
           <StyledLink>Press</StyledLink>
           <StyledLink>Work Here</StyledLink>
           <StyledLink>Legal</StyledLink>
