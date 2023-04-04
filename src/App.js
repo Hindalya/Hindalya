@@ -1,7 +1,6 @@
 import Home from "./pages/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import MyCourses from "./pages/MyCourses.jsx";
 import Contact from "./pages/Contact.jsx";
 import Projects from "./pages/Projects.jsx";
 import Blog from "./pages/Blog.jsx";
@@ -9,6 +8,7 @@ import Profile from "./pages/Profile.jsx";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Course from "./pages/Course.jsx";
 import Login from "./pages/Login.jsx";
+import About from "./pages/About.jsx";
 
 function App() {
   return (
