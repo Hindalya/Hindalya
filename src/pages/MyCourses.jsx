@@ -2,12 +2,12 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   padding-top:5rem;
 `;
-const MyCourses = () => {
+const About = () => {
   return (
     <Wrapper>
-      <h1>My Cources</h1>
+      <h1>About</h1>
     </Wrapper>
   )
 }
 
-export default MyCourses
+export default About

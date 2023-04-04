@@ -6,7 +6,6 @@ const StyledLink = styled(Link)`
   cursor: pointer;
   color: hsl(210,8%,60%);
   margin: 0.3rem;
-  cursor: pointer;
   font-size: 12px;
 
   &:hover {
@@ -98,13 +97,13 @@ function Footer() {
       <Center>
       <Heading>COMPANY</Heading>
         <LinkContainer>
-          <StyledLink>My Cources</StyledLink>
+          <StyledLink>About</StyledLink>
           <StyledLink>Press</StyledLink>
           <StyledLink>Work Here</StyledLink>
           <StyledLink>Legal</StyledLink>
           <StyledLink>Privacy Policy</StyledLink>
           <StyledLink>Term of Services</StyledLink>
-          <StyledLink>Contact Us</StyledLink>
+          <StyledLink to="/contact">Contact Us</StyledLink>
           <StyledLink>Cookies Settings</StyledLink>
           <StyledLink>Cookie Policy</StyledLink>
         </LinkContainer>
@@ -124,7 +123,7 @@ function Footer() {
       </Center>
       <Right>
       <SocialContainer>
-        <StyledLink to="/">Blog</StyledLink>
+        <StyledLink to="/blog">Blog</StyledLink>
         <StyledLink>Facebook</StyledLink>
         <StyledLink>Twitter</StyledLink>
         <StyledLink>LinkedIn</StyledLink>
